@@ -78,12 +78,29 @@ Email is similar, but you need to include `mailto:` in the parentheses. Here is 
 
 ## Code Chunks
 All R code is inserted between two gray bars called a code chunk. You can insert a new code chunk by clicking "Insert>R" at the top of the page. On a Mac, the shortcut is `option+command+i`. On a PC, the shortcut is `Ctrl+Alt+i`.  
+```{r}
+
+```
 
 ## Knit
 In order to make the html file, you need to "Knit" the file. Knitting just means build the file. If you click "Knit" now, it will knit the lab.  
 
 ## Practice
 1. Test out the arithmetic capabilities of R; experiment by doing addition, subtraction, multiplication, and division.  
+```{r}
+4+4
+```
+```{r}
+3-2
+```
+```{r}
+4*4
+```
+```{r}
+4/2
+```
+
+
 2. Go back to your "RMarkdown Practice" file and experiment with titles, text, and syntax.  
 3. Copy and paste the following two pieces of code into the document (include the gray code "chunks").      
 
