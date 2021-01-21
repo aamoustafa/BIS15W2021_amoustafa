@@ -1,7 +1,7 @@
 ---
 title: "Lab 3 Homework"
 author: "Alay Adeen Moustafa"
-date: "2021-01-18"
+date: "2021-01-19"
 output:
   html_document: 
     theme: spacelab

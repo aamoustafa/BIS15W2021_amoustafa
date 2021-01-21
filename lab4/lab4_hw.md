@@ -1,7 +1,7 @@
 ---
 title: "Lab 4 Homework"
 author: "Alay Adeen Moustafa"
-date: "2021-01-19"
+date: "2021-01-20"
 output:
   html_document: 
     theme: spacelab
@@ -206,6 +206,10 @@ summary(homerange)
 ##  NA's   :502
 ```
 
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
 
 **3. Change the class of the variables `taxon` and `order` to factors and display their levels.**  
 
@@ -248,6 +252,7 @@ class(homerange$order)
 ```
 ## [1] "factor"
 ```
+</div>
 
 
 **4. What taxa are represented in the `homerange` data frame? Make a new data frame `taxa` that is restricted to taxon, common name, class, order, family, genus, species.** 
@@ -397,6 +402,11 @@ mean(carnivoresmean, na.rm=T)
 
 Herbivores on average have a larger 'mean.hra.m2'. While herbivores have a mean of 34137012, carnovires have a mean of 13039918. 
 
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+
+<div class = "blue">
 
 **9. Make a new dataframe `deer` that is limited to the mean mass, log10 mass, family, genus, and species of deer in the database. The family for deer is cervidae. Arrange the data in descending order by log10 mass. Which is the largest deer? What is its common name?**  
 
@@ -465,6 +475,8 @@ filter(homerange, species == "capreolus")
 ## #   PPMR <dbl>, prey.size.reference <chr>
 ```
 The largest deer is capreolus, and it's common name is Roe Deer.
+
+</div>
 
 **10. As measured by the data, which snake species has the smallest homerange? Show all of your work, please. Look this species up online and tell me about it!** **Snake is found in taxon column** 
 
