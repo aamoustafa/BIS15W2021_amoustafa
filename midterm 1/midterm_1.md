@@ -1,7 +1,7 @@
 ---
 title: "Midterm 1"
 author: "Alay Adeen Moustafa"
-date: "2021-01-29"
+date: "2021-02-02"
 output:
   html_document: 
     theme: spacelab
