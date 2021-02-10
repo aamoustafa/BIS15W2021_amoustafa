@@ -1,7 +1,7 @@
 ---
 title: "Lab 8 Homework"
 author: "Alay Adeen Moustafa"
-date: "2021-02-03"
+date: "2021-02-09"
 output:
   html_document: 
     theme: spacelab
@@ -101,7 +101,7 @@ library(here)
 ```
 
 ```
-## here() starts at C:/Users/alaym/OneDrive/Documents/GitHub/BIS15W2021_amoustafa
+## here() starts at D:/TA files/Winter2021 BIS15L/students_rep/BIS15W2021_amoustafa
 ```
 
 The quotes show the folder structure from the root directory.
@@ -124,6 +124,10 @@ sydneybeaches <-read_csv(here("lab8", "data", "sydneybeaches.csv")) %>% janitor:
 ##   `Enterococci (cfu/100ml)` = col_double()
 ## )
 ```
+<style>
+div.blue { background-color:#e6f0ff; border-radius: 5px; padding: 20px;}
+</style>
+<div class = "blue">
 
 2. Are these data "tidy" per the definitions of the tidyverse? How do you know? Are they in wide or long format?
 
@@ -145,6 +149,7 @@ head(sydneybeaches)
 ```
 
 The data is untidy, as each variable does not have its own column and each value does not have it own cell. This applies to the date column where month, year, and day are all compressed into one cell and they don't have their own columns. They are in wide format.
+</div>
 
 3. We are only interested in the variables site, date, and enterococci_cfu_100ml. Make a new object focused on these variables only. Name the object `sydneybeaches_long`
 
