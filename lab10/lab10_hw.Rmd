@@ -188,7 +188,6 @@ deserts %>%
 ```{r}
 deserts %>%
   filter(taxa== "Rodent", sex != "NA", weight != "NA") %>%
-  group_by(genus) %>%
   ggplot(aes(x=genus, y=weight, fill= species)) +
   geom_col()+
   coord_flip()+
