@@ -39,6 +39,10 @@ grizzly <- read_csv(here("lab12", "data", "bear-sightings.csv")) %>%
 ```
 
 ```{r}
+head(grizzly)
+```
+
+```{r}
 grizzly %>% 
   select(latitude, longitude) %>% 
   summary()
@@ -77,7 +81,6 @@ wolves <- readr::read_csv("data/wolves_data/wolves_dataset.csv") %>%
 
 ```{r}
 head(wolves)
-glimpse(wolves)
 ```
 
 ```{r}
@@ -124,7 +127,7 @@ ggplot()+
 
 9. What is the average pack size for the wolves in this study by region?
 ```{r}
-lower_wolves %>%
+wolves %>% #If the questions asks for all wolves, not just in the lower 48 states
   group_by(pop) %>%
   summarize(mean_pack_size = mean(pack_size))
 ```

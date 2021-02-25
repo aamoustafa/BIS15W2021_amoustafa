@@ -11,7 +11,7 @@
 
 <meta name="author" content="Please Add Your Name Here" />
 
-<meta name="date" content="2021-02-24" />
+<meta name="date" content="2021-02-25" />
 
 <title>Lab 12 Homework</title>
 
@@ -191,7 +191,7 @@ summary {
 
 <h1 class="title toc-ignore">Lab 12 Homework</h1>
 <h4 class="author">Please Add Your Name Here</h4>
-<h4 class="date">2021-02-24</h4>
+<h4 class="date">2021-02-25</h4>
 
 </div>
 
@@ -227,6 +227,16 @@ library(albersusa)</code></pre>
 ##   longitude = col_double(),
 ##   latitude = col_double()
 ## )</code></pre>
+<pre class="r"><code>head(grizzly)</code></pre>
+<pre><code>## # A tibble: 6 x 3
+##   bear_id longitude latitude
+##     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+## 1       7     -149.     62.7
+## 2      57     -153.     58.4
+## 3      69     -145.     62.4
+## 4      75     -153.     59.9
+## 5     104     -143.     61.1
+## 6     108     -150.     62.9</code></pre>
 <pre class="r"><code>grizzly %&gt;% 
   select(latitude, longitude) %&gt;% 
   summary()</code></pre>
@@ -289,32 +299,6 @@ bbox &lt;- make_bbox(long, lat, f = 0.05)</code></pre>
 ## #   standard_latitude &lt;dbl&gt;, standard_longitude &lt;dbl&gt;, cav_binary &lt;dbl&gt;,
 ## #   cdv_binary &lt;dbl&gt;, cpv_binary &lt;dbl&gt;, chv_binary &lt;dbl&gt;, neo_binary &lt;dbl&gt;,
 ## #   toxo_binary &lt;dbl&gt;</code></pre>
-<pre class="r"><code>glimpse(wolves)</code></pre>
-<pre><code>## Rows: 1,986
-## Columns: 23
-## $ pop                &lt;chr&gt; &quot;AK.PEN&quot;, &quot;AK.PEN&quot;, &quot;AK.PEN&quot;, &quot;AK.PEN&quot;, &quot;AK.PEN&quot;...
-## $ year               &lt;dbl&gt; 2006, 2006, 2006, 2006, 2006, 2006, 2006, 2006, ...
-## $ age_cat            &lt;chr&gt; &quot;S&quot;, &quot;S&quot;, &quot;A&quot;, &quot;S&quot;, &quot;A&quot;, &quot;A&quot;, &quot;A&quot;, &quot;P&quot;, &quot;S&quot;, &quot;P&quot;...
-## $ sex                &lt;chr&gt; &quot;F&quot;, &quot;M&quot;, &quot;F&quot;, &quot;M&quot;, &quot;M&quot;, &quot;M&quot;, &quot;F&quot;, &quot;M&quot;, &quot;F&quot;, &quot;M&quot;...
-## $ color              &lt;chr&gt; &quot;G&quot;, &quot;G&quot;, &quot;G&quot;, &quot;B&quot;, &quot;B&quot;, &quot;G&quot;, &quot;G&quot;, &quot;G&quot;, &quot;G&quot;, &quot;G&quot;...
-## $ lat                &lt;dbl&gt; 57.03983, 57.03983, 57.03983, 57.03983, 57.03983...
-## $ long               &lt;dbl&gt; -157.8427, -157.8427, -157.8427, -157.8427, -157...
-## $ habitat            &lt;dbl&gt; 254.08, 254.08, 254.08, 254.08, 254.08, 254.08, ...
-## $ human              &lt;dbl&gt; 10.42, 10.42, 10.42, 10.42, 10.42, 10.42, 10.42,...
-## $ pop_density        &lt;dbl&gt; 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, ...
-## $ pack_size          &lt;dbl&gt; 8.78, 8.78, 8.78, 8.78, 8.78, 8.78, 8.78, 8.78, ...
-## $ standard_habitat   &lt;dbl&gt; -1.6339, -1.6339, -1.6339, -1.6339, -1.6339, -1....
-## $ standard_human     &lt;dbl&gt; -0.9784, -0.9784, -0.9784, -0.9784, -0.9784, -0....
-## $ standard_pop       &lt;dbl&gt; -0.6827, -0.6827, -0.6827, -0.6827, -0.6827, -0....
-## $ standard_packsize  &lt;dbl&gt; 1.3157, 1.3157, 1.3157, 1.3157, 1.3157, 1.3157, ...
-## $ standard_latitude  &lt;dbl&gt; 0.7214, 0.7214, 0.7214, 0.7214, 0.7214, 0.7214, ...
-## $ standard_longitude &lt;dbl&gt; -2.1441, -2.1441, -2.1441, -2.1441, -2.1441, -2....
-## $ cav_binary         &lt;dbl&gt; 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
-## $ cdv_binary         &lt;dbl&gt; 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...
-## $ cpv_binary         &lt;dbl&gt; 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, ...
-## $ chv_binary         &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, ...
-## $ neo_binary         &lt;dbl&gt; NA, NA, NA, 0, 0, NA, NA, 1, 0, 1, NA, 0, NA, NA...
-## $ toxo_binary        &lt;dbl&gt; NA, NA, NA, 1, 0, NA, NA, 1, 0, 0, NA, 0, NA, NA...</code></pre>
 <pre class="r"><code>wolves %&gt;% 
   select(lat, long) %&gt;% 
   summary()</code></pre>
@@ -361,18 +345,29 @@ bbox &lt;- make_bbox(long, lat, f = 0.05)</code></pre>
 <ol start="9" style="list-style-type: decimal">
 <li>What is the average pack size for the wolves in this study by region?</li>
 </ol>
-<pre class="r"><code>lower_wolves %&gt;%
+<pre class="r"><code>wolves %&gt;% #If the questions asks for all wolves, not just in the lower 48 states
   group_by(pop) %&gt;%
   summarize(mean_pack_size = mean(pack_size))</code></pre>
-<pre><code>## # A tibble: 6 x 2
-##   pop     mean_pack_size
-## * &lt;chr&gt;            &lt;dbl&gt;
-## 1 GTNP              8.1 
-## 2 MEXICAN           4.04
-## 3 MI                7.12
-## 4 MT                5.62
-## 5 SNF               4.81
-## 6 YNP               8.25</code></pre>
+<pre><code>## # A tibble: 17 x 2
+##    pop     mean_pack_size
+##  * &lt;chr&gt;            &lt;dbl&gt;
+##  1 AK.PEN            8.78
+##  2 BAN.JAS           9.56
+##  3 BC                5.88
+##  4 DENALI            6.45
+##  5 ELLES             9.19
+##  6 GTNP              8.1 
+##  7 INT.AK            6.24
+##  8 MEXICAN           4.04
+##  9 MI                7.12
+## 10 MT                5.62
+## 11 N.NWT             4   
+## 12 ONT               4.37
+## 13 SE.AK             5   
+## 14 SNF               4.81
+## 15 SS.NWT            3.55
+## 16 YNP               8.25
+## 17 YUCH              6.37</code></pre>
 <ol start="10" style="list-style-type: decimal">
 <li>Make a new map that shows the distribution of wolves in the lower 48 US states but which has the size of location markers adjusted by pack size.</li>
 </ol>

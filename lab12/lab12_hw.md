@@ -1,7 +1,7 @@
 ---
 title: "Lab 12 Homework"
 author: "Please Add Your Name Here"
-date: "2021-02-24"
+date: "2021-02-25"
 output:
   html_document: 
     theme: spacelab
@@ -50,6 +50,23 @@ grizzly <- read_csv(here("lab12", "data", "bear-sightings.csv")) %>%
 
 
 ```r
+head(grizzly)
+```
+
+```
+## # A tibble: 6 x 3
+##   bear_id longitude latitude
+##     <dbl>     <dbl>    <dbl>
+## 1       7     -149.     62.7
+## 2      57     -153.     58.4
+## 3      69     -145.     62.4
+## 4      75     -153.     59.9
+## 5     104     -143.     61.1
+## 6     108     -150.     62.9
+```
+
+
+```r
 grizzly %>% 
   select(latitude, longitude) %>% 
   summary()
@@ -88,7 +105,7 @@ bear_map <- get_map(bbox, maptype = "terrain", source = "stamen")
 ggmap(bear_map)
 ```
 
-![](lab12_hw_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
+![](lab12_hw_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
 
 4. Build a final map that overlays the recorded observations of grizzly bears in Alaska.
 
@@ -100,7 +117,7 @@ ggmap(bear_map) +
        y = "Latitude")
 ```
 
-![](lab12_hw_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+![](lab12_hw_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
 5. Let's switch to the wolves data. Load the data and evaluate its structure.
 
@@ -142,38 +159,6 @@ head(wolves)
 ## #   standard_latitude <dbl>, standard_longitude <dbl>, cav_binary <dbl>,
 ## #   cdv_binary <dbl>, cpv_binary <dbl>, chv_binary <dbl>, neo_binary <dbl>,
 ## #   toxo_binary <dbl>
-```
-
-```r
-glimpse(wolves)
-```
-
-```
-## Rows: 1,986
-## Columns: 23
-## $ pop                <chr> "AK.PEN", "AK.PEN", "AK.PEN", "AK.PEN", "AK.PEN"...
-## $ year               <dbl> 2006, 2006, 2006, 2006, 2006, 2006, 2006, 2006, ...
-## $ age_cat            <chr> "S", "S", "A", "S", "A", "A", "A", "P", "S", "P"...
-## $ sex                <chr> "F", "M", "F", "M", "M", "M", "F", "M", "F", "M"...
-## $ color              <chr> "G", "G", "G", "B", "B", "G", "G", "G", "G", "G"...
-## $ lat                <dbl> 57.03983, 57.03983, 57.03983, 57.03983, 57.03983...
-## $ long               <dbl> -157.8427, -157.8427, -157.8427, -157.8427, -157...
-## $ habitat            <dbl> 254.08, 254.08, 254.08, 254.08, 254.08, 254.08, ...
-## $ human              <dbl> 10.42, 10.42, 10.42, 10.42, 10.42, 10.42, 10.42,...
-## $ pop_density        <dbl> 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, ...
-## $ pack_size          <dbl> 8.78, 8.78, 8.78, 8.78, 8.78, 8.78, 8.78, 8.78, ...
-## $ standard_habitat   <dbl> -1.6339, -1.6339, -1.6339, -1.6339, -1.6339, -1....
-## $ standard_human     <dbl> -0.9784, -0.9784, -0.9784, -0.9784, -0.9784, -0....
-## $ standard_pop       <dbl> -0.6827, -0.6827, -0.6827, -0.6827, -0.6827, -0....
-## $ standard_packsize  <dbl> 1.3157, 1.3157, 1.3157, 1.3157, 1.3157, 1.3157, ...
-## $ standard_latitude  <dbl> 0.7214, 0.7214, 0.7214, 0.7214, 0.7214, 0.7214, ...
-## $ standard_longitude <dbl> -2.1441, -2.1441, -2.1441, -2.1441, -2.1441, -2....
-## $ cav_binary         <dbl> 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
-## $ cdv_binary         <dbl> 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...
-## $ cpv_binary         <dbl> 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, ...
-## $ chv_binary         <dbl> 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, ...
-## $ neo_binary         <dbl> NA, NA, NA, 0, 0, NA, NA, 1, 0, 1, NA, 0, NA, NA...
-## $ toxo_binary        <dbl> NA, NA, NA, 1, 0, NA, NA, 1, 0, 0, NA, 0, NA, NA...
 ```
 
 
@@ -229,7 +214,7 @@ ggplot() +
        y="Latitude" )
 ```
 
-![](lab12_hw_files/figure-html/unnamed-chunk-14-1.png)<!-- -->
+![](lab12_hw_files/figure-html/unnamed-chunk-15-1.png)<!-- -->
 
 8. Use the relimited data to plot the distribution of wolf populations in the lower 48 US states.
 
@@ -243,26 +228,37 @@ ggplot()+
        y="Latitude")
 ```
 
-![](lab12_hw_files/figure-html/unnamed-chunk-15-1.png)<!-- -->
+![](lab12_hw_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
 
 9. What is the average pack size for the wolves in this study by region?
 
 ```r
-lower_wolves %>%
+wolves %>% #If the questions asks for all wolves, not just in the lower 48 states
   group_by(pop) %>%
   summarize(mean_pack_size = mean(pack_size))
 ```
 
 ```
-## # A tibble: 6 x 2
-##   pop     mean_pack_size
-## * <chr>            <dbl>
-## 1 GTNP              8.1 
-## 2 MEXICAN           4.04
-## 3 MI                7.12
-## 4 MT                5.62
-## 5 SNF               4.81
-## 6 YNP               8.25
+## # A tibble: 17 x 2
+##    pop     mean_pack_size
+##  * <chr>            <dbl>
+##  1 AK.PEN            8.78
+##  2 BAN.JAS           9.56
+##  3 BC                5.88
+##  4 DENALI            6.45
+##  5 ELLES             9.19
+##  6 GTNP              8.1 
+##  7 INT.AK            6.24
+##  8 MEXICAN           4.04
+##  9 MI                7.12
+## 10 MT                5.62
+## 11 N.NWT             4   
+## 12 ONT               4.37
+## 13 SE.AK             5   
+## 14 SNF               4.81
+## 15 SS.NWT            3.55
+## 16 YNP               8.25
+## 17 YUCH              6.37
 ```
 
 10. Make a new map that shows the distribution of wolves in the lower 48 US states but which has the size of location markers adjusted by pack size.
@@ -277,7 +273,7 @@ ggplot()+
        y="Latitude")
 ```
 
-![](lab12_hw_files/figure-html/unnamed-chunk-17-1.png)<!-- -->
+![](lab12_hw_files/figure-html/unnamed-chunk-18-1.png)<!-- -->
 
 ## Push your final code to GitHub!
 Please be sure that you check the `keep md` file in the knit preferences. 
