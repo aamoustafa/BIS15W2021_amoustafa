@@ -117,7 +117,7 @@ ggplot()+
   geom_sf(data=us_comp, size=0.125)+
   geom_point(data=lower_wolves, aes(long, lat))+
   theme_minimal()+
-  labs(title="Location of Wolf Population in the Lower 48 US States",
+  labs(title="Location of Wolf Populations in the Lower 48 US States",
        x="Longitude",
        y="Latitude")
 ```
@@ -131,7 +131,6 @@ lower_wolves %>%
 
 10. Make a new map that shows the distribution of wolves in the lower 48 US states but which has the size of location markers adjusted by pack size.
 ```{r}
-#CHANGE THE TITLES
 ggplot()+
   geom_sf(data = us_comp, size = .0125) +
   geom_point(data=lower_wolves, aes(long, lat, size= pack_size))+
