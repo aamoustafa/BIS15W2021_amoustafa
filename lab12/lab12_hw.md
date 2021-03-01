@@ -1,7 +1,7 @@
 ---
 title: "Lab 12 Homework"
 author: "Please Add Your Name Here"
-date: "2021-02-25"
+date: "2021-03-01"
 output:
   html_document: 
     theme: spacelab
@@ -97,7 +97,83 @@ bear_map <- get_map(bbox, maptype = "terrain", source = "stamen")
 ```
 
 ```
-## Map tiles by Stamen Design, under CC BY 3.0. Data by OpenStreetMap, under ODbL.
+## Source : http://tile.stamen.com/terrain/5/1/6.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/2/6.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/3/6.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/4/6.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/1/7.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/2/7.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/3/7.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/4/7.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/1/8.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/2/8.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/3/8.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/4/8.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/1/9.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/2/9.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/3/9.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/4/9.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/1/10.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/2/10.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/3/10.png
+```
+
+```
+## Source : http://tile.stamen.com/terrain/5/4/10.png
 ```
 
 
@@ -146,14 +222,14 @@ head(wolves)
 
 ```
 ## # A tibble: 6 x 23
-##   pop    year age_cat sex   color   lat  long habitat human pop_density
-##   <chr> <dbl> <chr>   <chr> <chr> <dbl> <dbl>   <dbl> <dbl>       <dbl>
-## 1 AK.P~  2006 S       F     G      57.0 -158.    254.  10.4           8
-## 2 AK.P~  2006 S       M     G      57.0 -158.    254.  10.4           8
-## 3 AK.P~  2006 A       F     G      57.0 -158.    254.  10.4           8
-## 4 AK.P~  2006 S       M     B      57.0 -158.    254.  10.4           8
-## 5 AK.P~  2006 A       M     B      57.0 -158.    254.  10.4           8
-## 6 AK.P~  2006 A       M     G      57.0 -158.    254.  10.4           8
+##   pop     year age_cat sex   color   lat  long habitat human pop_density
+##   <chr>  <dbl> <chr>   <chr> <chr> <dbl> <dbl>   <dbl> <dbl>       <dbl>
+## 1 AK.PEN  2006 S       F     G      57.0 -158.    254.  10.4           8
+## 2 AK.PEN  2006 S       M     G      57.0 -158.    254.  10.4           8
+## 3 AK.PEN  2006 A       F     G      57.0 -158.    254.  10.4           8
+## 4 AK.PEN  2006 S       M     B      57.0 -158.    254.  10.4           8
+## 5 AK.PEN  2006 A       M     B      57.0 -158.    254.  10.4           8
+## 6 AK.PEN  2006 A       M     G      57.0 -158.    254.  10.4           8
 ## # ... with 13 more variables: pack_size <dbl>, standard_habitat <dbl>,
 ## #   standard_human <dbl>, standard_pop <dbl>, standard_packsize <dbl>,
 ## #   standard_latitude <dbl>, standard_longitude <dbl>, cav_binary <dbl>,
