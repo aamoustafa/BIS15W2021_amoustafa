@@ -69,8 +69,9 @@ Uptake_rate <-c(14.2, 24.1, 30.3, 34.6, 32.5, 35.4, 38.7,
 t.test(Uptake_rate, mu = 27)
 ```
 
-```{r}
 
+```{r}
+t.test(count)
 ```
 
 
